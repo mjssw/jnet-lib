@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\example">
+      <UniqueIdentifier>{a2d89639-28e7-4507-9b96-043f7afcb2cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{e3ac1e3e-7402-49a0-95ae-54daad79c74d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\higher_frame">
+      <UniqueIdentifier>{249d4ef3-0d66-4c4b-8cb7-34ef91d0f550}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fiber_file_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_http_client_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_http_server_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_http_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="http_client_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="http_server_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tlsext_sni_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_http_server.cpp">
+      <Filter>network\higher_frame</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_file.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_http.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_scheduler.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber_socket.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="http_parser.c">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="http_socket.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_address.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_base_type.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_error.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_file.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_resolver.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_service.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_socket.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp_thread.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl_socket.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="http_server.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="fiber.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="http.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp_http_server.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl_https_server.cpp">
+      <Filter>Source Files\example</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fiber_http_server.h">
+      <Filter>network\higher_frame</Filter>
+    </ClInclude>
+    <ClInclude Include="http_server.h">
+      <Filter>network\higher_frame</Filter>
+    </ClInclude>
+    <ClInclude Include="fiber_file.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="fiber_http.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="fiber_scheduler.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="fiber_socket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="http_parser.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="http_socket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_address.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_base_type.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_buffer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_config.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_error.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_file.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_lock.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_operation.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_resolver.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_service.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_socket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp_thread.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="net_service.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="net_socket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="noncopyable.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="ssl_socket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.txt" />
+  </ItemGroup>
+</Project>

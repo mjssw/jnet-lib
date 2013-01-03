@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B6BD02C-7C77-4358-A12C-851592351F70}</ProjectGuid>
+    <RootNamespace>iocp_library</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Command>echo #define _IOCP_NO_INCLUDE_ &gt; $(OutDir)iocp.h
+copy /Y /B $(OutDir)iocp.h+^
+$(ProjectDir)iocp_config.h+^
+$(ProjectDir)noncopyable.h+^
+$(ProjectDir)iocp_buffer.h+^
+$(ProjectDir)iocp_error.h+^
+$(ProjectDir)iocp_address.h+^
+$(ProjectDir)iocp_operation.h+^
+$(ProjectDir)iocp_lock.h+^
+$(ProjectDir)iocp_thread.h+^
+$(ProjectDir)iocp_resolver.h+^
+$(ProjectDir)iocp_base_type.h+^
+$(ProjectDir)iocp_service.h+^
+$(ProjectDir)iocp_socket.h+^
+$(ProjectDir)ssl_socket.h+^
+$(ProjectDir)http_parser.h+^
+$(ProjectDir)http_socket.h+^
+$(ProjectDir)iocp_file.h+^
+$(ProjectDir)simple_fiber.h+^
+$(ProjectDir)fiber_scheduler.h+^
+$(ProjectDir)fiber_socket.h+^
+$(ProjectDir)fiber_http.h+^
+$(ProjectDir)fiber_file.h $(OutDir)iocp.h
+
+echo #include "iocp.h" &gt; $(OutDir)iocp.cpp
+copy /Y /B $(OutDir)iocp.cpp+^
+$(ProjectDir)iocp_error.cpp+^
+$(ProjectDir)iocp_address.cpp+^
+$(ProjectDir)iocp_thread.cpp+^
+$(ProjectDir)iocp_resolver.cpp+^
+$(ProjectDir)iocp_base_type.cpp+^
+$(ProjectDir)iocp_service.cpp+^
+$(ProjectDir)iocp_socket.cpp+^
+$(ProjectDir)ssl_socket.cpp+^
+$(ProjectDir)http_parser.c+^
+$(ProjectDir)http_socket.cpp+^
+$(ProjectDir)iocp_file.cpp+^
+$(ProjectDir)fiber_scheduler.cpp+^
+$(ProjectDir)fiber_socket.cpp+^
+$(ProjectDir)fiber_http.cpp+^
+$(ProjectDir)fiber_file.cpp $(OutDir)iocp.cpp
+</Command>
+      <Inputs>%(Inputs)</Inputs>
+      <Outputs>$(OutDir)iocp.cpp;$(OutDir)iocp.h;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../simple_fiber/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CARES_STATICLIB;_NET_ENABLE_SSL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <CustomBuildStep>
+      <Command>echo #define _IOCP_NO_INCLUDE_ &gt; $(OutDir)iocp.h
+copy /Y /B $(OutDir)iocp.h+^
+$(ProjectDir)iocp_config.h+^
+$(ProjectDir)noncopyable.h+^
+$(ProjectDir)iocp_buffer.h+^
+$(ProjectDir)iocp_error.h+^
+$(ProjectDir)iocp_address.h+^
+$(ProjectDir)iocp_operation.h+^
+$(ProjectDir)iocp_lock.h+^
+$(ProjectDir)iocp_thread.h+^
+$(ProjectDir)iocp_resolver.h+^
+$(ProjectDir)iocp_base_type.h+^
+$(ProjectDir)iocp_service.h+^
+$(ProjectDir)iocp_socket.h+^
+$(ProjectDir)epoll_service.h+^
+$(ProjectDir)epoll_socket.h+^
+$(ProjectDir)ssl_socket.h+^
+$(ProjectDir)http_parser.h+^
+$(ProjectDir)http_socket.h+^
+$(ProjectDir)iocp_file.h+^
+$(ProjectDir)epoll_file.h+^
+$(ProjectDir)fiber_scheduler.h+^
+$(ProjectDir)fiber_socket.h+^
+$(ProjectDir)fiber_http.h+^
+$(ProjectDir)fiber_file.h $(OutDir)iocp.h
+
+echo #include "iocp.h" &gt; $(OutDir)iocp.cpp
+copy /Y /B $(OutDir)iocp.cpp+^
+$(ProjectDir)iocp_error.cpp+^
+$(ProjectDir)iocp_address.cpp+^
+$(ProjectDir)iocp_thread.cpp+^
+$(ProjectDir)iocp_resolver.cpp+^
+$(ProjectDir)iocp_base_type.cpp+^
+$(ProjectDir)iocp_service.cpp+^
+$(ProjectDir)iocp_socket.cpp+^
+$(ProjectDir)epoll_service.cpp+^
+$(ProjectDir)epoll_socket.cpp+^
+$(ProjectDir)ssl_socket.cpp+^
+$(ProjectDir)http_parser.c+^
+$(ProjectDir)http_socket.cpp+^
+$(ProjectDir)iocp_file.cpp+^
+$(ProjectDir)epoll_file.cpp+^
+$(ProjectDir)fiber_scheduler.cpp+^
+$(ProjectDir)fiber_socket.cpp+^
+$(ProjectDir)fiber_http.cpp+^
+$(ProjectDir)fiber_file.cpp $(OutDir)iocp.cpp
+</Command>
+      <Inputs>%(Inputs)</Inputs>
+      <Outputs>$(OutDir)iocp.cpp;$(OutDir)iocp.h;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../simple_fiber/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CARES_STATICLIB;_NET_ENABLE_SSL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../simple_fiber/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_NET_ENABLE_SSL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4669;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../simple_fiber/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_NET_ENABLE_SSL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4669;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="fiber_file_test.cpp" />
+    <ClCompile Include="fiber_http_client_test.cpp" />
+    <ClCompile Include="fiber_http_server_test.cpp" />
+    <ClCompile Include="fiber_http_test.cpp" />
+    <ClCompile Include="http_client_test.cpp" />
+    <ClCompile Include="http_server_test.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="tlsext_sni_test.cpp" />
+    <ClCompile Include="fiber.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="http.cpp" />
+    <ClCompile Include="ssl.cpp" />
+    <ClCompile Include="ssl_https_server.cpp" />
+    <ClCompile Include="tcp.cpp" />
+    <ClCompile Include="tcp_http_server.cpp" />
+    <ClCompile Include="fiber_http_server.cpp" />
+    <ClCompile Include="http_server.cpp" />
+    <ClCompile Include="fiber_file.cpp" />
+    <ClCompile Include="fiber_http.cpp" />
+    <ClCompile Include="fiber_scheduler.cpp" />
+    <ClCompile Include="fiber_socket.cpp" />
+    <ClCompile Include="http_parser.c" />
+    <ClCompile Include="http_socket.cpp" />
+    <ClCompile Include="iocp_address.cpp" />
+    <ClCompile Include="iocp_base_type.cpp" />
+    <ClCompile Include="iocp_error.cpp" />
+    <ClCompile Include="iocp_file.cpp" />
+    <ClCompile Include="iocp_resolver.cpp" />
+    <ClCompile Include="iocp_service.cpp" />
+    <ClCompile Include="iocp_socket.cpp" />
+    <ClCompile Include="iocp_thread.cpp" />
+    <ClCompile Include="ssl_socket.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fiber_http_server.h" />
+    <ClInclude Include="http_server.h" />
+    <ClInclude Include="fiber_file.h" />
+    <ClInclude Include="fiber_http.h" />
+    <ClInclude Include="fiber_scheduler.h" />
+    <ClInclude Include="fiber_socket.h" />
+    <ClInclude Include="http_parser.h" />
+    <ClInclude Include="http_socket.h" />
+    <ClInclude Include="iocp_address.h" />
+    <ClInclude Include="iocp_base_type.h" />
+    <ClInclude Include="iocp_buffer.h" />
+    <ClInclude Include="iocp_config.h" />
+    <ClInclude Include="iocp_error.h" />
+    <ClInclude Include="iocp_file.h" />
+    <ClInclude Include="iocp_lock.h" />
+    <ClInclude Include="iocp_operation.h" />
+    <ClInclude Include="iocp_resolver.h" />
+    <ClInclude Include="iocp_service.h" />
+    <ClInclude Include="iocp_socket.h" />
+    <ClInclude Include="iocp_thread.h" />
+    <ClInclude Include="net_service.h" />
+    <ClInclude Include="net_socket.h" />
+    <ClInclude Include="noncopyable.h" />
+    <ClInclude Include="ssl_socket.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
